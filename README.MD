@@ -1,7 +1,7 @@
 ### 3 functions to normalize strings, repair bad encoding, replace non-printable characters 
 
 
-#### The function use numba under the hood - that means the first run is very slow, (compile time), but then the speed-up is tremendous.
+#### The function uses numba under the hood - that means the first run is very slow, (compile time), but then the speed-up is tremendous.
 
 
 ##### pip install charchef
