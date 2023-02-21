@@ -1,7 +1,7 @@
 ### 3 functions to normalize strings, repair bad encoding, replace non-printable characters 
 
 
-#### The functions use numba under the hood - that means the first run is very slow, (compile time), but then the speed-up is tremendous.
+#### The function use numba under the hood - that means the first run is very slow, (compile time), but then the speed-up is tremendous.
 
 
 ##### pip install charchef
@@ -77,35 +77,33 @@ bigc3 = aa_replace_non_printable_chars(
 	
 bigc1 # replaces all accents, special characters ... 
 Out[3]: 
-['acelnoszz ACELNOSZZ Junto a Estacao de Carcavelos; Braganca Situado en el 
-nucleo de Es Calo de Sant Agusti frente al Hostal Rafalet. Cartao MOBI.E R. 
-Conselheiro Emidio Navarro (frente ao ISEL) R. Conselheiro Emidio Navarro 
-(frente ao ISEL) aaaaaeaa eeeee iiiii oooooeo uuuueu yyy Suzy & John " PS682m yydd*y 
-Smorgas Non ti suscita niente la parola pieti RosZ RUF MICH ZURUCK. aqui 09. Bat Nha 
-Tam Kinh crianca Koc University Technische Universitat Dresden Universitat fur Musik
- und darstellende Kunst Wien Technische Universitat Wien Ecole Nationale Superieure
- des Beaux-Arts Paris Universidad Simon Bolivar (USB) 240         Sland Islands   
- 2014.0      MARIEHAMN   11437.0 1 240         Sland Islands   2010.0      MARIEHAMN   
- 5829.5  1 240         Albania         2011.0      Durres      113249.0 240         
- Albania         2011.0      TIRANA      418495.0 240         Albania         2011.0
- Durres      56511.0 "Tutu Au Mic\' - dumbea"',
+['acelnoszz ACELNOSZZ Junto a Estacao de Carcavelos; Braganca Situado ',
+ 'en el nucleo de Es Calo de Sant Agusti frente al Hostal Rafalet. Cartao MOBI.E R. ',
+ 'Conselheiro Emidio Navarro (frente ao ISEL) R. Conselheiro Emidio Navarro (frente ao ISEL)',
+ ' aaaaaeaa eeeee iiiii oooooeo uuuueu yyy Suzy & John " PS682m ',
+ ' yydd*y Smorgas Non ti suscita niente la parola pieti RosZ RUF MICH ZURUCK.',
+ ' aqui 09. Bat Nha Tam Kinh crianca Koc University Technische Universitat Dresden Universitat ',
+ ' fur Musik und darstellende Kunst Wien Technische Universitat Wien Ecole Nationale Superieure ',
+ ' des Beaux-Arts Paris Universidad Simon Bolivar (USB) 240         Sland Islands   2014.0    ',
+ ' MARIEHAMN   11437.0 1 240         Sland Islands   2010.0      MARIEHAMN   5829.5  1 240        ',
+ ' Albania         2011.0      Durres      113249.0 240         Albania         2011.0      TIRANA ',
+ ' 418495.0 240         Albania         2011.0      Durres      56511.0 "Tutu Au Mic\' - dumbea"',
  '    ']
  
  
 bigc2 # Repairs messed up Unicode
 Out[4]: 
-['ąćęłńóśźż ĄĆĘŁŃÓŚŹ\\x00Ż Junto à Estação de Carcavelos; Bragança Situado en el núcleo 
-de Es Caló de Sant Agustí frente al Hostal Rafalet. Cartão MOBI.E R. Conselheiro 
-Emídio Navarro (frente ao ISEL) R. Conselheiro Emidio Navarro (frente ao ISEL) 
-àáâãäåa èéêëe ìíîïi òóôõöo ùúûüu ýÿy Suzy & John " £682m ÿÿðð•ÿ Smörgås Non ti 
-suscita niente la parola pietí RosŽ RUF MICH ZURÜCK. aquí 09. Bát Nhã Tâm Kinh 
-criança Koç University Technische Universität Dresden Universität für Musik und 
-darstellende Kunst Wien Technische Universität Wien École Nationale Supérieure 
-des Beaux-Arts Paris Universidad Simón Bolívar (USB) 240         Šland Islands   
-2014.0      MARIEHAMN   11437.0 1 240         Šland Islands   2010.0      MARIEHAMN  
- 5829.5  1 240         Albania         2011.0      Durrës      113249.0 240       
- Albania         2011.0      TIRANA      418495.0 240         Albania         2011.0 
- Durrës      56511.0 "Tutu Au Mic\' – dumbéa"',
+['ąćęłńóśźż ĄĆĘŁŃÓŚŹŻ Junto à Estação de Carcavelos; Bragança Situado ',
+ 'en el núcleo de Es Caló de Sant Agustí frente al Hostal Rafalet. Cartão MOBI.E R. ',
+ 'Conselheiro Emídio Navarro (frente ao ISEL) R. Conselheiro Emidio Navarro (frente ao ISEL)',
+ ' àáâãäåa èéêëe ìíîïi òóôõöo ùúûüu ýÿy Suzy & John " £682m ',
+ ' ÿÿðð•ÿ Smörgås Non ti suscita niente la parola pietí RosŽ RUF MICH ZURÜCK.',
+ ' aquí 09. Bát Nhã Tâm Kinh criança Koç University Technische Universität Dresden Universität ',
+ ' für Musik und darstellende Kunst Wien Technische Universität Wien École Nationale Supérieure ',
+ ' des Beaux-Arts Paris Universidad Simón Bolívar (USB) 240         Šland Islands   2014.0    ',
+ ' MARIEHAMN   11437.0 1 240         Šland Islands   2010.0      MARIEHAMN   5829.5  1 240        ',
+ ' Albania         2011.0      Durrës      113249.0 240         Albania         2011.0      TIRANA ',
+ ' 418495.0 240         Albania         2011.0      Durrës      56511.0 "Tutu Au Mic\' – dumbéa"',
  '    ']
  
  

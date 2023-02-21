@@ -84683,7 +84683,7 @@ def _convert_string(st):
     return altogo
 
 
-@jit(nopython=True)
+@jit(nopython=True,cache=True)
 def _back2utf8x_3_lower_case_escaped_sorted(string_, list1_, list2_):
     list1 = typed.List(list1_)
     list2 = typed.List(list2_)
@@ -84712,7 +84712,7 @@ def back2utf8x_3_lower_case_escaped_sorted(
         return acs
 
 
-@jit(nopython=True)
+@jit(nopython=True,cache=True)
 def _back2utf8x_3_upper_case_escaped_sorted(string_, list1_, list2_):
     list1 = typed.List(list1_)
     list2 = typed.List(list2_)
@@ -84741,7 +84741,7 @@ def back2utf8x_3_upper_case_escaped_sorted(
         return acs
 
 
-@jit(nopython=True)
+@jit(nopython=True,cache=True)
 def _back2utf8u_4_upper_case_escaped_sorted(string_, list1_, list2_):
     list1 = typed.List(list1_)
     list2 = typed.List(list2_)
@@ -84770,7 +84770,7 @@ def back2utf8u_4_upper_case_escaped_sorted(
         return acs
 
 
-@jit(nopython=True)
+@jit(nopython=True,cache=True)
 def _back2utf8u_4_lower_case_escaped_sorted(string_, list1_, list2_):
     list1 = typed.List(list1_)
     list2 = typed.List(list2_)
@@ -84799,7 +84799,7 @@ def back2utf8u_4_lower_case_escaped_sorted(
         return acs
 
 
-@jit(nopython=True)
+@jit(nopython=True,cache=True)
 def _back2utf8x_69_upper_case_escaped_sorted(string_, list1_, list2_):
     list1 = typed.List(list1_)
     list2 = typed.List(list2_)
@@ -84828,7 +84828,7 @@ def back2utf8x_69_upper_case_escaped_sorted(
         return acs
 
 
-@jit(nopython=True)
+@jit(nopython=True,cache=True)
 def _back2utf8x_69_lower_case_escaped_sorted(string_, list1_, list2_):
     list1 = typed.List(list1_)
     list2 = typed.List(list2_)
@@ -84857,7 +84857,7 @@ def back2utf8x_69_lower_case_escaped_sorted(
         return acs
 
 
-@jit(nopython=True)
+@jit(nopython=True,cache=True)
 def _back2utf8n_escaped_sorted(string_, list1_, list2_):
     list1 = typed.List(list1_)
     list2 = typed.List(list2_)
@@ -84882,7 +84882,7 @@ def back2utf8n_escaped_sorted(string_, formatbefore=True, formatafter=True):
         return acs
 
 
-@jit(nopython=True)
+@jit(nopython=True,cache=True)
 def _back2utf8wrong_chars_sorted(string_, list1_, list2_):
     list1 = typed.List(list1_)
     list2 = typed.List(list2_)
@@ -84907,7 +84907,7 @@ def back2utf8wrong_chars_sorted(string_, formatbefore=True, formatafter=True):
         return acs
 
 
-@jit(nopython=True)
+@jit(nopython=True,cache=True)
 def _back2utf8zerox_unescaped_lower_sorted(string_, list1_, list2_):
     list1 = typed.List(list1_)
     list2 = typed.List(list2_)
@@ -84934,7 +84934,7 @@ def back2utf8zerox_unescaped_lower_sorted(string_, formatbefore=True, formatafte
         return acs
 
 
-@jit(nopython=True)
+@jit(nopython=True,cache=True)
 def _back2utf8zerox_unescaped_upper_sorted(string_, list1_, list2_):
     list1 = typed.List(list1_)
     list2 = typed.List(list2_)
@@ -84961,7 +84961,7 @@ def back2utf8zerox_unescaped_upper_sorted(string_, formatbefore=True, formatafte
         return acs
 
 
-@jit(nopython=True)
+@jit(nopython=True,cache=True)
 def _back2utf8html_entity_sorted(string_, list1_, list2_):
     list1 = typed.List(list1_)
     list2 = typed.List(list2_)
@@ -84995,7 +84995,7 @@ def _adjuststringfinal(acs, li, change=True):
     return acs2
 
 
-@jit(nopython=True)
+@jit(nopython=True,cache=True)
 def _exeallcontrols_s(string_, list1_):
     list1 = typed.List(list1_)
     for k in list1:
@@ -85017,7 +85017,7 @@ def substitute_allcontrols_s(string_, formatbefore=True, formatafter=True):
         return acs
 
 
-@jit(nopython=True)
+@jit(nopython=True,cache=True)
 def _exeallcontrols(string_, list1_):
     list1 = typed.List(list1_)
     for k in list1:
@@ -85039,7 +85039,7 @@ def substitute_allcontrols(string_, formatbefore=True, formatafter=True):
         return acs
 
 
-@jit(nopython=True)
+@jit(nopython=True,cache=True)
 def _exeallcontrols2(string_, list1_):
     list1 = typed.List(list1_)
     for k in list1:
@@ -85061,7 +85061,7 @@ def substitute_allcontrols2(string_, formatbefore=True, formatafter=True):
         return acs
 
 
-@jit(nopython=True)
+@jit(nopython=True,cache=True)
 def _exeallcontrols2_s(string_, list1_):
     list1 = typed.List(list1_)
     for k in list1:
@@ -85083,7 +85083,7 @@ def substitute_allcontrols2_s(string_, formatbefore=True, formatafter=True):
         return acs
 
 
-@jit(nopython=True)
+@jit(nopython=True,cache=True)
 def _exeallcontrols3(string_, list1_):
     list1 = typed.List(list1_)
     for k in list1:
@@ -85105,7 +85105,7 @@ def substitute_allcontrols3(string_, formatbefore=True, formatafter=True):
         return acs
 
 
-@jit(nopython=True)
+@jit(nopython=True,cache=True)
 def _exeallcontrols3_s(string_, list1_):
     list1 = typed.List(list1_)
     for k in list1:
@@ -85127,7 +85127,7 @@ def substitute_allcontrols3_s(string_, formatbefore=True, formatafter=True):
         return acs
 
 
-@jit(nopython=True)
+@jit(nopython=True,cache=True)
 def _exeallcontrolsb(string_, list1_):
     list1 = typed.List(list1_)
     for k in list1:
@@ -85135,7 +85135,7 @@ def _exeallcontrolsb(string_, list1_):
     return string_
 
 
-@jit(nopython=True)
+@jit(nopython=True,cache=True)
 def _normalize_string(string_, list1_, list2_):
     list1 = typed.List(list1_)
     list2 = typed.List(list2_)
@@ -85194,10 +85194,12 @@ def aa_convert_utf8_to_ascii_(
             .replace("ä", "ae")
             .replace("ö", "oe")
             .replace("ü", "ue")
-            .replace("ä".upper(), "A")
-            .replace("ö".upper(), "a")
-            .replace("ü".upper(), "a")
+            .replace("ä".upper(), "Ae")
+            .replace("ö".upper(), "Oe")
+            .replace("ü".upper(), "Ue")
         )
+    else:
+        string_ = (string_.replace("ß", "b").replace("ẞ", "B"))
     string_ = aa_repair_bad_conversion_to_utf8(
         str_=string_,
         functions=preprocessing_functions,
@@ -85272,7 +85274,7 @@ def delete_xa0(string_):
         .replace("\\xA0", "")
         .replace("\\xa0", "")
         .replace("\xa0", "")
-        .replace("\xA0", "")
+        .replace("\xA0", "").replace('\\x00', '')
     )
 
     # string_.text = string_.replace("\\xa0", "")
